@@ -1,3 +1,6 @@
+*.vcxproj*
+*.sln
+.vs
 .git
 .build
 .debug
@@ -5,3 +8,5 @@
 tags
 .DS_Store
 .gdb_history
+bin 
+obj
