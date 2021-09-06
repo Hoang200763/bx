@@ -51,6 +51,22 @@ namespace bx
 	};
 
 	///
+	struct Vec2
+	{
+		///
+		Vec2();
+
+		///
+		explicit constexpr Vec2(float _v);
+
+		///
+		constexpr Vec2(float _x, float _y);
+
+		float x, y;
+	};
+
+
+	///
 	struct Vec3
 	{
 		///
@@ -63,6 +79,20 @@ namespace bx
 		constexpr Vec3(float _x, float _y, float _z);
 
 		float x, y, z;
+	};
+
+	struct Vec4
+	{
+		///
+		Vec4();
+
+		///
+		explicit constexpr Vec4(float _v);
+
+		///
+		constexpr Vec4(float _x, float _y, float _z, float _w);
+
+		float x, y, z, w;
 	};
 
 	///
@@ -307,6 +337,28 @@ namespace bx
 	void store(void* _ptr, const Ty& _a);
 
 	///
+	BX_CONSTEXPR_FUNC Vec2 round(const Vec2 _a);
+
+	///
+	BX_CONSTEXPR_FUNC Vec2 abs(const Vec2 _a);
+
+	///
+	BX_CONSTEXPR_FUNC Vec2 neg(const Vec2 _a);
+
+	///
+	BX_CONSTEXPR_FUNC Vec2 add(const Vec2 _a, const Vec2 _b);
+
+	///
+	BX_CONSTEXPR_FUNC Vec2 add(const Vec2 _a, float _b);
+
+	///
+	BX_CONSTEXPR_FUNC Vec2 sub(const Vec2 _a, const Vec2 _b);
+
+	///
+	BX_CONSTEXPR_FUNC Vec2 sub(const Vec2 _a, float _b);
+
+
+	///
 	BX_CONSTEXPR_FUNC Vec3 round(const Vec3 _a);
 
 	///
@@ -377,6 +429,27 @@ namespace bx
 
 	/// Returns component wise reciprocal of _a.
 	BX_CONSTEXPR_FUNC Vec3 rcp(const Vec3 _a);
+
+	///
+	BX_CONSTEXPR_FUNC Vec4 round(const Vec4 _a);
+
+	///
+	BX_CONSTEXPR_FUNC Vec4 abs(const Vec4 _a);
+
+	///
+	BX_CONSTEXPR_FUNC Vec4 neg(const Vec4 _a);
+
+	///
+	BX_CONSTEXPR_FUNC Vec4 add(const Vec4 _a, const Vec4 _b);
+
+	///
+	BX_CONSTEXPR_FUNC Vec4 add(const Vec4 _a, float _b);
+
+	///
+	BX_CONSTEXPR_FUNC Vec4 sub(const Vec4 _a, const Vec4 _b);
+
+	///
+	BX_CONSTEXPR_FUNC Vec4 sub(const Vec4 _a, float _b);
 
 	///
 	void calcTangentFrame(Vec3& _outT, Vec3& _outB, const Vec3 _n);

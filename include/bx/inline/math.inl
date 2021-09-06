@@ -394,6 +394,87 @@ namespace bx
 		memCopy(_ptr, &_a, sizeof(Ty) );
 	}
 
+	inline Vec2::Vec2()
+	{
+	}
+
+	inline Vec2::Vec2(float _v)
+		: x(_v)
+		, y(_v)
+	{
+	}
+
+	inline Vec2::Vec2(float _x, float _y)
+		: x(_x)
+		, y(_y)
+	{
+	}
+
+	inline BX_CONSTEXPR_FUNC Vec2 round(const Vec2 _a)
+	{
+		return
+		{
+			round(_a.x),
+			round(_a.y),
+		};
+	}
+
+	inline BX_CONSTEXPR_FUNC Vec2 abs(const Vec2 _a)
+	{
+		return
+		{
+			abs(_a.x),
+			abs(_a.y),
+
+		};
+	}
+
+	inline BX_CONSTEXPR_FUNC Vec2 neg(const Vec2 _a)
+	{
+		return
+		{
+			-_a.x,
+			-_a.y,
+
+		};
+	}
+
+	inline BX_CONSTEXPR_FUNC Vec2 add(const Vec2 _a, const Vec2 _b)
+	{
+		return
+		{
+			_a.x + _b.x,
+			_a.y + _b.y,
+		};
+	}
+
+	inline BX_CONSTEXPR_FUNC Vec2 add(const Vec2 _a, float _b)
+	{
+		return
+		{
+			_a.x + _b,
+			_a.y + _b,
+		};
+	}
+
+	inline BX_CONSTEXPR_FUNC Vec2 sub(const Vec2 _a, const Vec2 _b)
+	{
+		return
+		{
+			_a.x - _b.x,
+			_a.y - _b.y,
+		};
+	}
+
+	inline BX_CONSTEXPR_FUNC Vec2 sub(const Vec2 _a, float _b)
+	{
+		return
+		{
+			_a.x - _b,
+			_a.y - _b,
+		};
+	}
+
 	inline Vec3::Vec3()
 	{
 	}
@@ -609,6 +690,105 @@ namespace bx
 			1.0f / _a.z,
 		};
 	}
+
+
+	inline Vec4::Vec4()
+	{
+	}
+
+	constexpr Vec4::Vec4(float _v)
+		: x(_v)
+		, y(_v)
+		, z(_v)
+		, w(_v)
+	{
+	}
+
+	constexpr Vec4::Vec4(float _x, float _y, float _z, float _w)
+		: x(_x)
+		, y(_y)
+		, z(_z)
+		, w(_w)
+	{
+	}
+
+	inline BX_CONSTEXPR_FUNC Vec4 round(const Vec4 _a)
+	{
+		return
+		{
+			round(_a.x),
+			round(_a.y),
+			round(_a.z),
+			round(_a.w)
+		};
+	}
+
+	inline BX_CONSTEXPR_FUNC Vec4 abs(const Vec4 _a)
+	{
+		return
+		{
+			abs(_a.x),
+			abs(_a.y),
+			abs(_a.z),
+			abs(_a.w)
+		};
+	}
+
+	inline BX_CONSTEXPR_FUNC Vec4 neg(const Vec4 _a)
+	{
+		return
+		{
+			-_a.x,
+			-_a.y,
+			-_a.z,
+			-_a.w
+		};
+	}
+
+	inline BX_CONSTEXPR_FUNC Vec4 add(const Vec4 _a, const Vec4 _b)
+	{
+		return
+		{
+			_a.x + _b.x,
+			_a.y + _b.y,
+			_a.z + _b.z,
+			_a.w + _b.w
+		};
+	}
+
+	inline BX_CONSTEXPR_FUNC Vec4 add(const Vec4 _a, float _b)
+	{
+		return
+		{
+			_a.x + _b,
+			_a.y + _b,
+			_a.z + _b,
+			_a.w + _b
+		};
+	}
+
+	inline BX_CONSTEXPR_FUNC Vec4 sub(const Vec4 _a, const Vec4 _b)
+	{
+		return
+		{
+			_a.x - _b.x,
+			_a.y - _b.y,
+			_a.z - _b.z,
+			_a.w - _b.w
+		};
+	}
+
+	inline BX_CONSTEXPR_FUNC Vec4 sub(const Vec4 _a, float _b)
+	{
+		return
+		{
+			_a.x - _b,
+			_a.y - _b,
+			_a.z - _b,
+			_a.w - _b
+		};
+	}
+
 
 	inline void calcTangentFrame(Vec3& _outT, Vec3& _outB, const Vec3 _n)
 	{
